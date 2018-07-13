@@ -1,0 +1,1013 @@
+* { margin: 0; box-sizing: border-box; }
+
+body {
+  font-size: 16px;
+  line-height: 32px;
+  font-family: Helvetica, Arial, Ubuntu, sans-serif;
+  color: #e00b55;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #FFF;
+}
+
+h1 a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+h1 a:visited {
+  color: #FFF;
+}
+
+h1 a:hover, footer a:hover {
+  color: #e8e8e8;
+}
+
+h1 a:active, footer a:active {
+  color: black;
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 99.5%;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+h4 {
+  color: black;
+}
+
+header, main, footer {
+  margin: 1.25rem auto;
+  padding: .5rem;
+  max-width: 960px;
+}
+
+header, footer {
+  border: 5px solid;
+}
+
+header, footer, footer a {
+  text-align: center;
+  background-color: #e00b55;
+  color: #000;
+}
+
+header nav ul {
+  margin-left: -50px;
+  list-style-type: none;
+}
+
+header nav a {
+  background-color: black;
+  color: #FFF;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  font-weight: bolder;
+}
+
+header nav a:hover {
+  background-color: #e8e8e8;
+  color: black;
+}
+
+header nav a:active {
+  color: #e00b55;
+}
+
+header img {
+  display: none;
+}
+
+th {
+  font-size: 125%;
+  background-color: #e00b55;
+  color: white;
+}
+
+@media only screen and (min-width: 500px) {
+  header {
+    height: 230px;
+  }
+
+  header img {
+    display: block;
+    width: 250px;
+    height: 205px;
+    float: right;
+    border: 2px solid;
+  }
+
+  nav ul {
+    margin-top: 35px;
+  }
+
+  nav a {
+    padding: 15px;
+  }
+
+  h1 {
+    padding-top: 30px;
+  }
+
+  h2 {
+    margin-left: -45px;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  header {
+    height: 250px;
+  }
+
+  header img {
+    height: 225px;
+  }
+
+  h1 {
+    padding-top: 65px;
+  }
+
+  h2 {
+    margin-left: -110px;
+  }
+
+  th {
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (min-width: 740px) {
+  h2 {
+    margin-left: -120px;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table a {
+  text-decoration: none;
+}
+
+table a:hover {
+  text-decoration: underline;
+  color: #e00b55;
+}
+
+table a:active {
+  color: black;
+}
+
+tr {
+  height: 75px;
+}
+
+tr:nth-child(even) {
+  background-color: #e8e8e8;
+}
+
+th, td {
+  border: 1px solid black;
+  text-align: left;
+  padding: 5px 5px 5px 10px;
+}
+
+td:nth-of-type(2), td:nth-of-type(3) {
+  text-align: center;
+  font-weight: bolder;
+}
+
+footer {
+  font-size: .85rem;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+/********************************
+     TRANSITION DEMONSTRATION
+********************************/
+.shape {
+  margin: 10px 0px;
+  background: blue;
+}
+
+.shape1, .shape2, .shape3, .shape4, .shape5 {
+  width: 12em;
+  height: 12em;
+}
+
+.small-shape1, .small-shape2, .small-shape3, .small-shape4, .small-shape5, .small-shape6 {
+  width: 3em;
+  height: 3em;
+  transition-property: width;
+  transition-duration: 3s;
+}
+
+.shape1:hover, .small-shape1:hover, .shape2:hover, .small-shape2:hover, .shape3:hover, .small-shape3:hover, .shape4:hover, .small-shape4:hover, .small-shape5:hover, .small-shape6:hover {
+  width: 35em;
+}
+
+/* Transition-Property */
+.shape1 {
+  transition-property: width;
+  transition-duration: .5s;
+}
+
+/* Transition-Duration */
+.shape2 {
+  transition-property: width;
+  transition-duration: 3s;
+}
+
+/* Linear Transition-Timing-Function */
+.small-shape1, .small-circle1 {
+  transition-timing-function: linear;
+}
+
+/* Ease Transition-Timing-Function */
+.small-shape2, .small-circle2 {
+  transition-timing-function: ease;
+}
+
+/* Ease-In Transition-Timing-Function */
+.small-shape3, .small-circle3 {
+  transition-timing-function: ease-in;
+}
+
+/* Ease-Out Transition-Timing-Function */
+.small-shape4, .small-circle4 {
+  transition-timing-function: ease-out;
+}
+
+/* Ease-In-Out Transition-Timing-Function */
+.small-shape5, .small-circle5 {
+  transition-timing-function: ease-in-out;
+}
+
+/* Cubic-Bezier Transition-Timing-Function */
+.small-shape6, .small-circle6 {
+  transition-timing-function: cubic-bezier(.17,.67,.83,-0.69);
+}
+
+/* Comparison of Transition-Timing-Functions */
+.transition-example {
+  width: 90%;
+}
+
+.transition-example:hover > div {
+  width: 90%;
+}
+
+/* Transition-Delay */
+.shape3 {
+  transition-property: width;
+  transition-duration: .5s;
+  transition-delay: 1s;
+}
+
+/* Transition Shorthand */
+.shape4 {
+  transition: width .5s cubic-bezier(1,.23,.11,.99) .75s;
+}
+
+/* Blue Square to Yellow Circle */
+.shape5 {
+  transition: all 1s cubic-bezier(1,.23,.11,.99); /* All properties - default, no delay*/
+}
+
+.shape5:hover {
+  width: 9em;
+  height: 9em;
+  background-color: yellow;
+  border-radius: 50%; /* Square to Circle */
+}
+
+/* Basic Navigation Transition */
+main nav {
+  background-color: blue;
+}
+
+main nav ul {
+  padding: 0px;
+}
+
+main nav li {
+  display: inline-block;
+  padding: 30px;
+}
+
+main nav li a {
+  text-decoration: none;
+  font-size: 125%;
+  font-weight: bold;
+  color: orange;
+  transition: font-size .25s linear, border-top .25s linear, border-bottom .25s linear; /* multiple transitions, comma separated */
+}
+
+main nav li a:hover {
+  font-size: 130%;
+  border-top: 3px solid orange;
+  border-bottom: 3px solid orange;
+}
+
+main nav li a:active {
+  color: #e8e8e8;
+  border-top: 3px solid #e8e8e8;
+  border-bottom: 3px solid #e8e8e8;
+}
+
+/* Submit Button Transition */
+input[type=submit] {
+  width: 100px;
+  height: 50px;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  font-weight: bolder;
+  margin-top: 25px;
+  transition: width .15s linear, height .15s linear;
+}
+
+input[type=submit]:hover {
+  width: 110px;
+  height: 60px;
+  background-color: orange;
+  color: white;
+  font-size: 125%;
+  font-weight: bolder;
+  box-shadow: 3px 3px 6px #666444;
+}
+
+input[type=submit]:active {
+  color: #e8e8e8;
+}
+
+/********************************
+    TRANSFORM DEMONSTRATION
+********************************/
+
+.circle {
+  margin: 10px 0px;
+  background: green;
+  color: black;
+  font-weight: bolder;
+}
+
+.circle1, .circle2, .circle3, .circle4, .circle5, .circle6, .circle7, .circle8, .circle9, .circle10, .circle11, .circle12, .circle13, .circle14 {
+  width: 9em;
+  height: 9em;
+  border-radius: 50%;
+}
+
+/* TranslateX Transform */
+.circle1:hover {
+  transform: translateX(50px);
+}
+
+/* TranslateY Transform */
+.circle2:hover {
+  transform: translateY(50px);
+  margin-bottom: 50px;
+}
+
+/* Translate X & Y Transform */
+.circle3:hover {
+  transform: translate(50px, 50px);
+  margin-bottom: 50px;
+}
+
+/* ScaleX Transform */
+.circle4:hover {
+  transform: scaleX(3);
+  border-radius: 50%;
+}
+
+/* ScaleY Transform */
+.circle5:hover {
+  transform: scaleY(3);
+  border-radius: 50%;
+}
+
+/* Scale X & Y Transform */
+.circle6:hover {
+  transform: scale(3);
+  border-radius: 50%;
+}
+
+/* RotateX Transform */
+.circle7:hover {
+  transform: rotateX(180deg);
+}
+
+/* RotateY Transform */
+.circle8:hover {
+  transform: rotateY(180deg);
+}
+
+/* RotateZ Transform */
+.circle9:hover {
+  transform: rotateZ(180deg);
+}
+
+/* Rotate Transform */
+.circle10:hover {
+  transform: rotate(45deg);
+}
+
+/* SkewX Transform */
+.circle11:hover {
+  transform: skewX(45deg);
+  border-radius: 0%;
+}
+
+/* SkewY Transform */
+.circle12:hover {
+  transform: skewY(135deg);
+  border-radius: 0%;
+}
+
+/* Skew X & Y Transform */
+.circle13:hover {
+  transform: skew(66deg, 350deg);
+  border-radius: 0%;
+}
+
+/* Transform Examples (with Transitions) */
+
+.transform-example {
+  width: 90%;
+}
+
+.transform-example:hover > div {
+  transform: translate(700px,70px) scale(2) rotate(270deg);
+  border-radius: 0%;
+}
+
+.small-circle1, .small-circle2, .small-circle3, .small-circle4, .small-circle5, .small-circle6 {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  transition-property: all;
+  transition-duration: 3s;
+}
+
+.small-circle1:hover, .small-circle2:hover, .small-circle3:hover, .small-circle4:hover, .small-circle5:hover, .small-circle6:hover {
+  border-radius: 0%;
+}
+
+.transform-example:hover > .small-circle1 {
+  background-color: royalblue;
+}
+
+.transform-example:hover > .small-circle2 {
+  background-color: teal;
+}
+
+.transform-example:hover > .small-circle3 {
+  background-color: rebeccapurple;
+}
+
+.transform-example:hover > .small-circle4 {
+  background-color: yellowgreen;
+}
+
+.transform-example:hover > .small-circle5 {
+  background-color: orangered;
+}
+
+.transform-example:hover > .small-circle6 {
+  background-color: hotpink;
+}
+
+figure img {
+  width: 30%;
+  margin-top: 25px;
+  border-radius: 5px;
+  transition: all .5s ease;
+}
+
+figure img:hover {
+  transform: scale(1.5);
+  opacity: .5;
+  border-radius: 50%;
+}
+
+/********************************
+  CSS MANIPULATION DEMONSTRATION
+********************************/
+
+#example1 {
+  height: 50px;
+  margin-top: 10px;
+  background-color: #e00b55;
+}
+
+.container {
+  font-size: 125%;
+  color: black;
+  font-weight: bolder;
+  padding-left: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.configure {
+  border-radius: 0px;
+}
+
+label, .buttons {
+  margin: 15px 0px;
+}
+
+label {
+  color: black;
+  font-weight: bolder;
+}
+
+.style-block {
+  display: block;
+}
+
+.style-block > input {
+  display: inline-block;
+  width: 200px;
+}
+
+.buttons {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #EEE;
+  display: block;
+}
+
+input[type=checkbox] {
+  position: relative;
+  bottom: -5px;
+  left: 5px;
+  width: 25px;
+  height: 25px;
+}
+
+/********************************
+    CSS TRIGGERS W/ JAVASCRIPT
+********************************/
+
+.toggleContainer {
+  margin: 30px 0px 15px 0px;
+}
+
+/* Slightly modified button from a cit230 exercise */
+.toggleBtn {
+  position: relative;
+  width: 100px;
+  height: 17px;
+  padding: 25px;
+  top:0px;
+  color: #FFF;
+  font-family: sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 15px;
+  transition: border 200ms, background 200ms, box-shadow 200ms, top 200ms;
+  border: 3px solid rgb(86, 185, 86);
+  background: rgb(70, 225, 70);
+  box-shadow: 0px 0px 1px rgb(0,0,0);
+  top: 6px;
+}
+
+.toggleOff {
+  border: 3px solid #91113d;
+  background-color: #e00b55;
+  box-shadow: 2px 6px 1px #91113d;
+}
+
+.bgc {
+  animation: background-changer 20s linear infinite alternate both;
+}
+
+.no-bgc {
+  animation: none;
+}
+
+/********************************
+    HTML5 TAGS DEMONSTRATION
+********************************/
+
+video {
+  width: 100%;
+  display: block;
+}
+
+#canvas-example {
+  width: 300px;
+  height: 300px;
+}
+
+#screaming-example:hover > canvas {
+  animation: scream 1s linear alternate both;
+}
+
+#scream {
+  width: 250px;
+  height: 300px;
+  display: none;
+}
+
+#screaming {
+  animation: screaming 1s linear alternate both;
+  visibility: hidden;
+}
+
+/********************************
+    ANIMATION DEMONSTRATION
+********************************/
+
+.container {
+  width: 90%;
+}
+
+.animation {
+  width: 9em;
+  height: 9em;
+  background-color: orange;
+}
+
+/* Animation-Name */
+.container:hover > .animation1 {
+  position: relative;
+  animation-name: animation1;
+  animation-duration: 3s;
+}
+
+/* Animation-Duration */
+.container:hover > .animation2 {
+  position: relative;
+  animation-name: animation2;
+  animation-duration: 5s;
+}
+
+/* Animation-Timing-Function */
+.container:hover > .animation3 {
+  position: relative;
+  animation-name: animation3;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+
+/* Animation-Delay */
+.container:hover > .animation4 {
+  position: relative;
+  animation-name: animation4;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+}
+
+/* Animation-Iteration-Count */
+.container:hover > .animation5 {
+  position: relative;
+  animation-name: animation5;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 3;
+}
+
+/* Animation-Direction */
+.container:hover > .animation6 {
+  position: relative;
+  animation-name: animation6;
+  animation-duration: 4s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+
+/* Animation-Fill-Mode */
+.container:hover > .animation7 {
+  position: relative;
+  animation-name: animation7;
+  animation-duration: 4s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+/* Animation-Play-State */
+.container:hover > .animation8 {
+  position: relative;
+  animation-name: animation8;
+  animation-duration: 4s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: backwards;
+  animation-play-state: running;
+}
+
+/* Animation Shorthand */
+.container:hover > .animation9 {
+  position: relative;
+  animation: animation9 3s linear 0.25s 2 normal backwards running;
+}
+
+/********************************
+    KEYFRAMES ANIMATIONS
+********************************/
+
+@keyframes animation1 {
+  from {left: 0px;}
+  50% {left: 200px;}
+  to {left: 0px;}
+}
+
+@keyframes animation2 {
+  from {left: 0px}
+  25% {left: 100px}
+  50% {right: 150px;}
+  75% {left: 200px;}
+  to {left: 0px;}
+}
+
+@keyframes animation3 {
+  from {left: 0px}
+  25% {
+    left: 100px;
+    border-radius: 50%;
+    background-color: green;}
+  50% {
+    right: 150px;
+    width: 6em;
+    height: 6em;}
+  75% {left: 200px;}
+  to {
+    left: 0px;
+    border-radius: 0%;
+  }
+}
+
+@keyframes animation4 {
+  from {
+    left: 0px;
+    border-radius: 0%;
+  }
+  10% {
+    left: 100px;
+    border-radius: 25%;
+    background-color: green;
+  }
+  20% {
+    left: 200px;
+    border-radius: 50%;
+    background-color: red;
+  }
+  30% {
+    left: 300px;
+    border-radius: 25%;
+    background-color: yellow;
+  }
+  40% {
+    left: 400px;
+    border-radius: 0%;
+    background-color: blue;
+}
+  50% {
+    left: 500px;
+    border-radius: 25%;
+    background-color: purple;
+}
+  60% {
+    left: 400px;
+    border-radius: 50%;
+    background-color: black;
+}
+  70% {
+    left: 300px;
+    border-radius: 25%;
+    background-color: gray;
+}
+  80% {
+    left: 200px;
+    border-radius: 0%;
+    background-color: pink;
+}
+  90% {
+    left: 100px;
+    border-radius: 50%;
+    background-color: teal;
+}
+  to {
+    left: 0px;
+    border-radius: 0%;
+    background-color: orange;
+  }
+}
+
+@keyframes animation5 {
+  from {left: 0px}
+  25% {
+    left: 100px;
+    background-color: red;}
+  50% {
+    right: 150px;
+    width: 40em;}
+  75% {left: 200px;}
+  to {left: 0px;}
+}
+
+@keyframes animation6 {
+  from {left: 0px;}
+  50% {left: 300px; transform: rotate(270deg); border-radius: 50%;}
+  to {left: 0px;}
+}
+
+@keyframes animation7 {
+  from {left: 0px;}
+  50% {
+    left: 300px;
+    transform: rotate(270deg);
+    border-radius: 50%;
+    background-color: red;
+  }
+  to {
+    left: 0px;
+    background-color: green;
+  }
+}
+
+@keyframes animation8 {
+  from {left: 0px;}
+  25% {
+    left: 400px;
+    bottom: 5px;
+  }
+  35% {
+    bottom: 10px;
+  }
+  50% {
+    left: 800px;
+    bottom: 100px;
+    border-radius: 50%;
+    transform: scale(2);
+    background-color:aqua;
+  }
+  75% {
+    left: 400px;
+    bottom: 20px;
+    transform: scale(1);
+  }
+  to {
+    left: 0px;
+    bottom: 0px;
+  }
+}
+
+@keyframes animation9 {
+  from {left: 0px;}
+  25% {
+    left: 300px;
+    transform: rotate(270deg);
+    border-radius: 50%;
+    background-color: #7B2DD7;
+  }
+  50% {
+    left: 150px;
+  }
+  75% {
+    left: 450px;
+    background-color: hotpink;
+  }
+  to {left: 0px;}
+}
+
+@keyframes background-changer {
+  0% {
+    background-color: #FFD300;
+  }
+  25% {
+    background-color: #A6F900;
+  }
+  50% {
+    background-color: #5B77FB;
+  }
+  75% {
+    background-color: #7B2DD7;
+  }
+  100% {
+    background-color: #FFF;
+  }
+}
+
+:root {
+  --transform: translate(0%,0%);
+  --transition: transform var(--transform);
+}
+
+@keyframes checked-animation {
+  0% {
+    transform: translate(0%,0%) var(--transform);
+  }
+  10% {
+    transform: translate(20%,0%) var(--transform);
+  }
+  20% {
+    transform: translate(40%,0%) var(--transform);
+    transition: var(--transition);
+  }
+  30% {
+    transform: translate(65%,0%) var(--transform);
+  }
+  40% {
+    transform: translate(80%,0%) var(--transform);
+    transition: var(--transition);
+  }
+  50% {
+    transform: translate(100%,0%) var(--transform);
+    width:90%;
+    height: 50px;
+  }
+  60% {
+    transform: translate(80%,0%) var(--transform);
+    transition: var(--transition);
+  }
+  70% {
+    transform: translate(60%,0%) var(--transform);
+  }
+  80% {
+    transform: translate(40%,0%) var(--transform);
+    transition: var(--transition);
+  }
+  90% {
+    transform: translate(20%,0%) var(--transform);
+  }
+  100% {
+    transform: translate(0%,0%) var(--transform);
+    transition: var(--transition);
+  }
+}
+
+@keyframes scream {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(20px, 0px);
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: translate(0px, 0px);
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: translate(20px, 0px);
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: translate(0px, 0px);
+    transform: rotate(0deg);
+    content: attr(alt);
+  }
+}
+
+@keyframes screaming {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(20px, 0px);
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: translate(0px, 0px);
+    transform: rotate(15deg);
+    visibility: visible;
+    height: 150px;
+  }
+  75% {
+    transform: translate(20px, 0px);
+    transform: rotate(-15deg);
+    height: 175px;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    transform: rotate(0deg);
+    height: 200px;
+  }
+}

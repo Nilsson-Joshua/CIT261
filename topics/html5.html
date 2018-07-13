@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML5 Tags | CIT 261 Topic</title>
+    <meta name="description" content="CIT 261 HTML5 Tags">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/main.css">
+  </head>
+
+  <body>
+    <header>
+      <p><img src="../images/my-profile-picture.jpg" alt="My Profile Picture"></p>
+      <h1><strong><a href="../index.html">Joshua Nilsson</a></strong></h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2><strong>HTML5 Tags - Video, Audio, and Canvas</strong></h2>
+
+      <h3>CIT 261 Week 5 Team Meeting (Video)</h3>
+      <div class="style-block">
+        <video id="video-example" controls>
+          <source src="../media/week5.mp4" type="video/mp4">
+        </video>
+
+        <h3>CIT 261 Week 5 Team Meeting (Audio)</h3>
+        <audio controls>
+          <source src="../media/week5.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <h3>Canvas Scream! (Hover)</h3>
+      <div id="screaming-example">
+        <img id="scream" src="../media/scream.jpg" alt="The Scream">
+          <canvas id="canvas-example">
+            Your browser does not support the HTML5 canvas tag.
+          </canvas>
+        <canvas id="screaming">
+          Your browser does not support the HTML5 canvas tag.
+        </canvas>
+      </div>
+    </main>
+
+    <footer>
+      <div>
+        <p><strong>© 2018 - Joshua R. Nilsson - Location: Highland, Utah - <a href="http://www.byui.edu/online" target="_blank">BYU-Idaho</a></strong></p>
+      </div>
+    </footer>
+    <script src="../scripts/modernizr-custom.js"></script>
+    <script src="../scripts/functions.js"></script>
+  </body>
+</html>

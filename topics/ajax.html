@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      canvas {
+        width: 25%;
+        border:1px solid #000000;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="demo">
+      <h1>The XMLHttpRequest Object</h1>
+      <button type="button" onclick="loadDoc()">Change Content</button>
+    </div>
+
+    <canvas id="canvas" width="578" height="400"></canvas>
+    <script>
+      var canvas = document.getElementById('canvas');
+      var context = canvas.getContext('2d');
+      var imageObj = new Image();
+
+      imageObj.onload = function() {
+        context.drawImage(imageObj, 69, 50);
+      };
+      imageObj.src = '../images/image-2.jpg';
+    </script>
+    <script src="../scripts/ajax.js"></script>
+  </body>
+</html>
